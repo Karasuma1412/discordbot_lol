@@ -2,6 +2,7 @@ package de.karasuma.discordbot.lol.commands;
 
 import de.karasuma.discordbot.lol.RiotAPIHandler;
 import de.karasuma.discordbot.lol.commandhandling.Command;
+import de.karasuma.discordbot.lol.data.Summoner;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -39,9 +40,14 @@ public class CommandLastMatch implements Command {
         return (long) match.get("gameId");
     }
 
-    private String parseSummonerData(JSONObject summonerDate) {
-        return (String) summonerDate.get("accountId");
+    private Summoner parseSummonerData(JSONObject summonerData) {
+        String accountId = (String) summonerData.get("accountId");
+        String name = (String) summonerData.get("name");
 
+        return Summoner.builder()
+                .accountId(accountId)
+                .name(name)
+                .build();
     }
 
     @Override
