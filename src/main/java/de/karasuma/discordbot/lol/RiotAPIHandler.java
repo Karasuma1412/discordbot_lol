@@ -48,4 +48,8 @@ public class RiotAPIHandler {
     public static JSONObject getMatchesDataByAccount(String accountId) {
         return getRequestTo("https://euw1.api.riotgames.com/lol/match/v4/matchlists/by-account/" + accountId);
     }
+
+    public static JSONObject getMatchData(long gameId) {
+        return getRequestTo("https://euw1.api.riotgames.com/lol/match/v4/matches/" + gameId);
+    }
 }
