@@ -41,8 +41,7 @@ public class RiotAPIHandler {
         return champData;
     }
 
-    public static void getSummonerIdByName(String name) {
-        JSONObject requestTo = getRequestTo("https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + name);
-        System.out.println(requestTo);
+    public static JSONObject getSummonerDataByName(String name) {
+        return getRequestTo("https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + name);
     }
 }
