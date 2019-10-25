@@ -1,6 +1,6 @@
 package de.karasuma.discordbot.lol.commands;
 
-import de.karasuma.discordbot.lol.ChampRotation;
+import de.karasuma.discordbot.lol.data.ChampRotation;
 import de.karasuma.discordbot.lol.RiotAPIHandler;
 import de.karasuma.discordbot.lol.commandhandling.Command;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;

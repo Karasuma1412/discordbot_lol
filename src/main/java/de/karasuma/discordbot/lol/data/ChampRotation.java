@@ -1,4 +1,4 @@
-package de.karasuma.discordbot.lol;
+package de.karasuma.discordbot.lol.data;
 
 import java.util.HashMap;
 
