@@ -30,7 +30,32 @@ public class CommandLastMatch implements Command {
             JSONObject participant = (JSONObject) participantIdentities.get(i);
             JSONObject player = (JSONObject) participant.get("player");
 
+            String playerName = (String) player.get("summonerName");
 
+            if (playerName.equals(name)) {
+                participantId = (Integer) participant.get("participantId");
+                break;
+            }
+        }
+
+        if (participantId == null) {
+            return;
+        }
+
+        JSONArray participants = (JSONArray) lastMatchData.get("participants");
+        for (int i = 0; i < participants.size(); i++) {
+            JSONObject participant = (JSONObject) participants.get(i);
+            int id = (int) participant.get("participantId");
+
+            if (id == participantId) {
+                JSONObject timeline = (JSONObject) participant.get("timeline");
+                String lane = (String) timeline.get("lane");
+                long kills = (long) timeline.get("kills");
+                long assists = (long) timeline.get("assists");
+                long deaths = (long) timeline.get("deaths");
+                boolean win = (boolean) timeline.get("win");
+                long championId = (long) participant.get("championId");
+            }
         }
     }
 
