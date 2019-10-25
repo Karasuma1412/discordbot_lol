@@ -29,7 +29,7 @@ public class CommandLastMatch implements Command {
             JSONObject participant = (JSONObject) participantIdentities.get(i);
             JSONObject player = (JSONObject) participant.get("player");
 
-            if (player.get("summonerName").equals(""))
+
         }
     }
 
@@ -41,6 +41,7 @@ public class CommandLastMatch implements Command {
 
     private String parseSummonerData(JSONObject summonerDate) {
         return (String) summonerDate.get("accountId");
+
     }
 
     @Override
