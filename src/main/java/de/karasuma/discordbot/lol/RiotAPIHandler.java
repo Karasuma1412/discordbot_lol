@@ -44,4 +44,8 @@ public class RiotAPIHandler {
     public static JSONObject getSummonerDataByName(String name) {
         return getRequestTo("https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + name);
     }
+
+    public static JSONObject getMAtchesDataByAccount(String accountId) {
+        return null;
+    }
 }

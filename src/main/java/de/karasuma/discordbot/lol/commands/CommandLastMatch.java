@@ -14,11 +14,12 @@ public class CommandLastMatch implements Command {
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
         JSONObject summonerData = RiotAPIHandler.getSummonerDataByName(args[0]);
-        parseSummonerData(summonerData);
+        String accountId = parseSummonerAccountId(summonerData);
+        JSONObject matchesData = RiotAPIHandler.getMAtchesDataByAccount(accountId);
     }
 
-    private void parseSummonerData(JSONObject summonderData) {
-
+    private String parseSummonerAccountId(JSONObject summonerDate) {
+        return (String) summonerDate.get("accountId");
     }
 
     @Override
