@@ -25,7 +25,7 @@ public class LoLBot extends DiscordBot{
 	@Override
 	public void init() {
 		setBuilder(new JDABuilder(AccountType.BOT));
-		getBuilder().setToken(Token.TOKEN_PRODUCTION);
+		getBuilder().setToken(Token.TOKEN_TEST);
 		getBuilder().setAutoReconnect(true);
 		getBuilder().addEventListeners(new CommandListener());
 
