@@ -1,5 +1,6 @@
-package de.karasuma.discordbot.lol;
+package de.karasuma.discordbot.lol.commands;
 
+import de.karasuma.discordbot.lol.LoLBot;
 import de.karasuma.discordbot.lol.commandhandling.Command;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 

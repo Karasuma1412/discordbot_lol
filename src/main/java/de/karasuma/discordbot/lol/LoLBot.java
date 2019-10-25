@@ -2,6 +2,8 @@ package de.karasuma.discordbot.lol;
 
 import de.karasuma.discordbot.lol.commandhandling.CommandHandler;
 import de.karasuma.discordbot.lol.commandhandling.CommandListener;
+import de.karasuma.discordbot.lol.commands.CommandChampRotation;
+import de.karasuma.discordbot.lol.commands.CommandOPUserLink;
 import de.karasuma.discordbot.lol.consolecommands.ConsoleCommandStart;
 import de.karasuma.discordbot.lol.consolecommands.ConsoleCommandStop;
 import de.karasuma.discordbot.lol.consolecommands.ConsoleCommandUpdateActivityName;
