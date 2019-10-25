@@ -1,7 +1,9 @@
 package de.karasuma.discordbot.lol.commands;
 
 import de.karasuma.discordbot.lol.api.RiotAPIHandler;
+import de.karasuma.discordbot.lol.api.RiotAPIWrapper;
 import de.karasuma.discordbot.lol.commandhandling.Command;
+import de.karasuma.discordbot.lol.data.Champion;
 import de.karasuma.discordbot.lol.data.Summoner;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import org.json.simple.JSONArray;
@@ -55,6 +57,7 @@ public class CommandLastMatch implements Command {
                 long deaths = (long) timeline.get("deaths");
                 boolean win = (boolean) timeline.get("win");
                 long championId = (long) participant.get("championId");
+                Champion champion = RiotAPIWrapper.getChampionById(championId);
             }
         }
     }
