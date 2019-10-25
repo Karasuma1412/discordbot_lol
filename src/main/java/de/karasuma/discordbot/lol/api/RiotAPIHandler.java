@@ -1,8 +1,9 @@
-package de.karasuma.discordbot.lol;
+package de.karasuma.discordbot.lol.api;
 
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
+import de.karasuma.discordbot.lol.Token;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
