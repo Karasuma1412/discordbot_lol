@@ -3,6 +3,7 @@ package de.karasuma.discordbot.lol;
 import de.karasuma.discordbot.lol.commandhandling.CommandHandler;
 import de.karasuma.discordbot.lol.commandhandling.CommandListener;
 import de.karasuma.discordbot.lol.commands.CommandChampRotation;
+import de.karasuma.discordbot.lol.commands.CommandLastMatch;
 import de.karasuma.discordbot.lol.commands.CommandOPUserLink;
 import de.karasuma.discordbot.lol.consolecommands.ConsoleCommandStart;
 import de.karasuma.discordbot.lol.consolecommands.ConsoleCommandStop;
@@ -44,6 +45,7 @@ public class LoLBot extends DiscordBot{
 		CommandHandler.commands.put("Rotation", new CommandChampRotation());
 		CommandHandler.commands.put("rota", new CommandChampRotation());
 		CommandHandler.commands.put("Rota", new CommandChampRotation());
+		CommandHandler.commands.put("lg", new CommandLastMatch());
 	}
 	
 	private void setupConsoleCommands() {
